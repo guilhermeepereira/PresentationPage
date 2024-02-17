@@ -8,33 +8,39 @@
   padding: 0;
   box-sizing: border-box;
   font-family: poppins;
+  background-color: #252424;
+  color: white;
 }
 
 body {
-  background-color: #c6c6c5;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.hand {
-  animation: wave 2s infinite;
-  transform-origin: 50% 100%;
+#root {
+  width: 100vw;
 }
 
-@keyframes wave {
-  0%,
-  100% {
+@keyframes waving {
+  0% {
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(5deg);
+    transform: rotate(-15deg);
   }
   50% {
     transform: rotate(0deg);
   }
   75% {
-    transform: rotate(-15deg);
+    transform: rotate(15deg);
   }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.hand {
+  animation: waving 3s infinite;
+  display: inline-block;
 }

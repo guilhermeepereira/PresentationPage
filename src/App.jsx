@@ -1,19 +1,19 @@
 import "./index.css";
-import ProfilePic from "./assets/profile-pic.png";
+import ProfilePic from "./assets/image00003.png";
 import Texts from "./components/texts";
-import Medias from "./components/medias";
+import Header from "./components/header";
 
 function App() {
   return (
-    <div className="flex-col flex gap-10">
-      <div className="flex items-center gap-20">
-        <img className="h-96" src={ProfilePic} />
-        <Texts />
-      </div>
-      <div className="flex justify-center">
-        <Medias />
-      </div>
-    </div>
+    <>
+      <Header />
+      <main className="flex-col flex gap-10 h-[85%]">
+        <div className="flex px-[13%] items-center justify-center gap-40 h-screen">
+          <img className="h-96" src={ProfilePic} />
+          <Texts />
+        </div>
+      </main>
+    </>
   );
 }
 
