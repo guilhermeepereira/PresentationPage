@@ -7,9 +7,15 @@ function App() {
   return (
     <>
       <Header />
-      <main className="flex-col flex gap-10 h-[85%]">
-        <div className="flex px-[13%] items-center justify-center gap-40 h-screen">
-          <img className="h-96" src={ProfilePic} />
+      <main className="h-[85%] px-8 w-screen flex flex-col justify-center">
+        <div
+          className="flex flex-col gap-5 items-center lg:flex-row xl:justify-center xl:gap-40"
+          id="infos"
+        >
+          <img
+            className="w-44 bg-transparent md:w-64 lg:w-[350px] xl:w-72"
+            src={ProfilePic}
+          />
           <Texts />
         </div>
       </main>
