@@ -10,7 +10,7 @@ const Button = () => {
       >
         <button
           href="#"
-          className="flex items-center gap-1 text-center bg-transparent font-semibold text-lg md:text-2xl lg:text-3xl xl:text-lg"
+          className="flex items-center gap-1 text-center bg-transparent font-semibold text-base md:text-2xl lg:text-3xl xl:text-lg"
         >
           Portfólio
           <MdImportContacts className="bg-transparent hover:text-[#1E90FF]" />
@@ -22,7 +22,7 @@ const Button = () => {
       >
         <button
           href="#"
-          className="flex items-center gap-1 text-center bg-transparent font-semibold text-lg md:text-2xl lg:text-3xl xl:text-lg"
+          className="flex items-center gap-1 text-center bg-transparent font-semibold text-base md:text-2xl lg:text-3xl xl:text-lg"
         >
           Sobre mim
           <MdEmojiPeople className="bg-transparent hover:text-[#1E90FF]" />

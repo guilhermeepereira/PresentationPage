@@ -2,6 +2,21 @@ import React from "react";
 import Logo from "../assets/Sem_título-2.png";
 import { MdPermPhoneMsg } from "react-icons/md";
 
+function handleMenuToggle() {
+  const menu = document.querySelector(".group-focus\\:top-0");
+  // Verifica se o menu está visível ou oculto
+  const isVisible = menu.classList.contains("top-0");
+
+  // Se estiver visível, oculta; se estiver oculto, exibe
+  if (isVisible) {
+    menu.classList.remove("top-0");
+    menu.classList.add("-top-full");
+  } else {
+    menu.classList.remove("-top-full");
+    menu.classList.add("top-0");
+  }
+}
+
 const Header = () => {
   return (
     <header className="flex px-[13%] justify-between border-b items-center h-[15%] w-full">
@@ -9,7 +24,7 @@ const Header = () => {
         <img src={Logo} className="w-44" />
       </div>
       <div className="hidden md:flex">
-        <ul className="flex ml-10 gap-10 items-center lg:text-2xl xl:text-base">
+        <ul className="flex ml-10 gap-10 items-center lg:text-2xl xl:text-base w-max">
           <li>
             <a href="#" className="hover:text-[#1E90FF] transition duration-75">
               Home
@@ -23,6 +38,11 @@ const Header = () => {
           <li>
             <a href="#" className="hover:text-[#1E90FF] transition duration-75">
               Portfólio
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-[#1E90FF] transition duration-75">
+              Sobre mim
             </a>
           </li>
           <a
@@ -41,7 +61,10 @@ const Header = () => {
           </a>
         </ul>
       </div>
-      <button className="space-y-1 group md:hidden">
+      <button
+        className="space-y-1 group md:hidden"
+        onTouchStart={() => handleMenuToggle()}
+      >
         <div className="w-6 h-1 bg-white"></div>
         <div className="w-6 h-1 bg-white"></div>
         <div className="w-6 h-1 bg-white"></div>
@@ -54,30 +77,38 @@ const Header = () => {
             <div className="w-6 h-1 rotate-45 absolute bg-white"></div>
             <div className="w-6 h-1 -rotate-45 absolute bg-white"></div>
           </button>
-          <li className="flex justify-center w-full py-4 bg-[#181818] hover:bg-[#202020]">
-            <a
-              href="#"
-              className="bg-[#181818] bg-transparent hover:text-[#1E90FF] transition duration-75"
-            >
+          <a
+            href="#"
+            className="bg-[#181818] bg-transparent hover:bg-red-200 transition duration-75"
+          >
+            <li className="flex justify-center w-full py-4 bg-[#181818] hover:bg-[#202020]">
               Home
-            </a>
-          </li>
-          <li className="flex justify-center w-full py-4 bg-[#181818] hover:bg-[#202020]">
-            <a
-              href="#"
-              className="bg-[#181818] bg-transparent hover:text-[#1E90FF] transition duration-75"
-            >
+            </li>
+          </a>
+          <a
+            href="#"
+            className="bg-[#181818] bg-transparent hover:bg-red-200 transition duration-75"
+          >
+            <li className="flex justify-center w-full py-4 bg-[#181818] hover:bg-[#202020]">
               Serviços
-            </a>
-          </li>
-          <li className="flex justify-center w-full py-4 bg-[#181818] hover:bg-[#202020]">
-            <a
-              href="#"
-              className="bg-[#181818] bg-transparent hover:text-[#1E90FF] transition duration-75"
-            >
+            </li>
+          </a>
+          <a
+            href="#"
+            className="bg-[#181818] bg-transparent hover:bg-red-200 transition duration-75"
+          >
+            <li className="flex justify-center w-full py-4 bg-[#181818] hover:bg-[#202020]">
               Portfólio
-            </a>
-          </li>
+            </li>
+          </a>
+          <a
+            href="#"
+            className="bg-[#181818] bg-transparent hover:bg-red-200 transition duration-75"
+          >
+            <li className="flex justify-center w-full py-4 bg-[#181818] hover:bg-[#202020]">
+              Sobre mim
+            </li>
+          </a>
           <a
             href="#"
             className="bg-[#181818] bg-transparent hover:bg-red-200 transition duration-75"
